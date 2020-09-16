@@ -21,7 +21,7 @@
 
         <form id="get-form" class="mt-3">
           <fieldset class="form-group">
-            <label for="get"><b><span class="text-success">GET</span> Post</b></label>
+            <label id="get" for="get"><b><span class="text-success">GET</span> Post</b></label>
             <div class="mt-1">
               Ex<strong>(1 post)</strong>: {{ url('api/topicality').'/' }}<span class="text-danger">{post-ID}</span>?api_token=<span class="text-danger">{user-token}</span>
               <br>
@@ -37,7 +37,7 @@
 
           <form id="post-form" class="mt-3">
             <fieldset class="form-group">
-              <label for="post"><b><span class="text-primary">POST</span> Post</b></label>
+              <label id="post" for="post"><b><span class="text-primary">POST</span> Post</b></label>
               <div class="mt-1">
                 Ex: {{ url('api/topicality') }}?api_token=<span class="text-danger">{user-token}</span>
               </div>
@@ -54,7 +54,7 @@
 
             <form id="update-form" class="mt-3">
               <fieldset class="form-group">
-                <label for="update"><b><span class="text-warning">UPDATE</span> Post</b></label>
+                <label id="update" for="update"><b><span class="text-warning">UPDATE</span> Post</b></label>
                 <div class="my-1">
                   Ex: {{ url('api/topicality').'/' }}<span class="text-danger">{post-ID}</span>?api_token=<span class="text-danger">{user-token}</span>
                 </div>
@@ -70,7 +70,7 @@
 
               <form id="delete-form" class="mt-3">
                 <fieldset class="form-group">
-                  <label for="delete"><b><span class="text-danger">DELETE</span> Post</b></label>
+                  <label id="delete" for="delete"><b><span class="text-danger">DELETE</span> Post</b></label>
                   <div class="my-1">
                     Ex: {{ url('api/topicality').'/' }}<span class="text-danger">{post-ID}</span>?api_token=<span class="text-danger">{user-token}</span>
                   </div>

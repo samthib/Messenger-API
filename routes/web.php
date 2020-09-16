@@ -26,5 +26,8 @@ Route::get('/site', function () {
   ]);
 })->name('site');
 
+Route::get('/about', function() {
+  return view('about');
+})->name('about');
 
 Auth::routes();

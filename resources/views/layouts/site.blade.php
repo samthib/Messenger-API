@@ -34,7 +34,7 @@
             </div>
         </nav>
 
-        <main class="bg-primary p-md-5 min-vh-100">
+        <main class="bg-info p-md-5 min-vh-100">
             @yield('content')
         </main>
     </div>
