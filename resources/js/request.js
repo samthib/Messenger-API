@@ -6,27 +6,28 @@ var site_frame = document.getElementById('site-frame');
 const site_frame_url = site_frame.src;
 const token = document.querySelector('meta[name="csrf-token"]').content;
 
+
 /* API GET Request */
 form_get.addEventListener('submit', function (e) {
   e.preventDefault();
-  fetchRequest('GET', '', this.url.value, this.frame);
+  fetchRequest('GET', '', this.url.value, this.querySelector('.frame'));
 });
 /* API POST Request */
 form_post.addEventListener('submit', function (e) {
   e.preventDefault();
   var parameters = {'title': this.title.value, 'content': this.content.value};
-  fetchRequest('POST', parameters, this.url.value, this.frame);
+  fetchRequest('POST', parameters, this.url.value, this.querySelector('.frame'));
 });
 /* API PATCH Request */
 form_update.addEventListener('submit', function (e) {
   e.preventDefault();
   var parameters = {'title': this.title.value, 'content': this.content.value};
-  fetchRequest('PATCH', parameters, this.url.value, this.frame);
+  fetchRequest('PATCH', parameters, this.url.value, this.querySelector('.frame'));
 });
 /* API DELETE Request */
 form_delete.addEventListener('submit', function (e) {
   e.preventDefault();
-  fetchRequest('DELETE', '', this.url.value, this.frame);
+  fetchRequest('DELETE', '', this.url.value, this.querySelector('.frame'));
 });
 
 /* Fetch & Send result to the DOM */
@@ -50,12 +51,16 @@ function fetchRequest(requestMethod, parameters, url, frame) {
         'fail': 'Something went wrong',
       }, undefined, 2)
       throw Error(response.statusText);
+
+      hljs.highlightBlock(frame);// Reload the syntax in the block of code
     }
     return response;
   }).then(response => {
     response.json().then(data => {
       frame.innerHTML = JSON.stringify(data, undefined, 2);
       site_frame.src = site_frame_url;
+
+      hljs.highlightBlock(frame);// Reload the syntax in the block of code
     })
   }).catch(error => {
     console.log(error);

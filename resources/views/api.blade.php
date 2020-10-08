@@ -31,8 +31,8 @@
               <input type="text" id="get-input" name="url" class="form-control mt-1" value="{{ url('api/topicality').'/1?api_token='.Auth::user()->api_token }}">
               <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
             @endauth
-            <textarea id="get-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest</textarea>
-            </fieldset>
+            <pre><code class="json border rounded text-left frame mt-1" id="get-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+          </fieldset>
           </form>
 
           <form id="post-form" class="mt-3">
@@ -47,9 +47,8 @@
                 <textarea id="post-input-content" name="content" class="form-control mt-1" rows="4" cols="80" placeholder="Content ..."></textarea>
                 <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
               @endauth
-              <textarea id="post-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest
-              </textarea>
-              </fieldset>
+              <pre><code class="json border rounded text-left frame mt-1" id="post-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+            </fieldset>
             </form>
 
             <form id="update-form" class="mt-3">
@@ -64,8 +63,8 @@
                   <textarea id="update-input-content" name="content" class="form-control mt-1" rows="4" cols="80" placeholder="Content ..."></textarea>
                   <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
                 @endauth
-                <textarea id="update-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest</textarea>
-                </fieldset>
+                <pre><code class="json border rounded text-left frame mt-1" id="update-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+              </fieldset>
               </form>
 
               <form id="delete-form" class="mt-3">
@@ -78,8 +77,8 @@
                     <input type="text" id="delete-input" name="url" class="form-control mt-1" value="{{ url('api/topicality').'/1?api_token='.Auth::user()->api_token }}">
                     <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
                   @endauth
-                  <textarea id="delete-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest</textarea>
-                  </fieldset>
+                  <pre><code class="json border rounded text-left frame mt-1" id="delete-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+                </fieldset>
                 </form>
               </div>
 
