@@ -21,7 +21,7 @@
 
         <form id="get-form" class="mt-3">
           <fieldset class="form-group">
-            <label id="get" for="get"><b><span class="text-success">GET</span> Post</b></label>
+            <h6><b><span class="text-success">GET</span> Post</b></h6>
             <div class="mt-1">
               Ex<strong>(1 post)</strong>: {{ url('api/topicality').'/' }}<span class="text-danger">{post-ID}</span>?api_token=<span class="text-danger">{user-token}</span>
               <br>
@@ -31,13 +31,13 @@
               <input type="text" id="get-input" name="url" class="form-control mt-1" value="{{ url('api/topicality').'/1?api_token='.Auth::user()->api_token }}">
               <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
             @endauth
-            <textarea id="get-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest</textarea>
-            </fieldset>
+            <pre><code class="json border rounded text-left frame mt-1" id="get-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+          </fieldset>
           </form>
 
           <form id="post-form" class="mt-3">
             <fieldset class="form-group">
-              <label id="post" for="post"><b><span class="text-primary">POST</span> Post</b></label>
+              <h6><b><span class="text-primary">POST</span> Post</b></h6>
               <div class="mt-1">
                 Ex: {{ url('api/topicality') }}?api_token=<span class="text-danger">{user-token}</span>
               </div>
@@ -47,14 +47,13 @@
                 <textarea id="post-input-content" name="content" class="form-control mt-1" rows="4" cols="80" placeholder="Content ..."></textarea>
                 <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
               @endauth
-              <textarea id="post-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest
-              </textarea>
-              </fieldset>
+              <pre><code class="json border rounded text-left frame mt-1" id="post-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+            </fieldset>
             </form>
 
             <form id="update-form" class="mt-3">
               <fieldset class="form-group">
-                <label id="update" for="update"><b><span class="text-warning">UPDATE</span> Post</b></label>
+                <h6><b><span class="text-warning">UPDATE</span> Post</b></h6>
                 <div class="my-1">
                   Ex: {{ url('api/topicality').'/' }}<span class="text-danger">{post-ID}</span>?api_token=<span class="text-danger">{user-token}</span>
                 </div>
@@ -64,13 +63,13 @@
                   <textarea id="update-input-content" name="content" class="form-control mt-1" rows="4" cols="80" placeholder="Content ..."></textarea>
                   <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
                 @endauth
-                <textarea id="update-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest</textarea>
-                </fieldset>
+                <pre><code class="json border rounded text-left frame mt-1" id="update-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+              </fieldset>
               </form>
 
               <form id="delete-form" class="mt-3">
                 <fieldset class="form-group">
-                  <label id="delete" for="delete"><b><span class="text-danger">DELETE</span> Post</b></label>
+                  <h6><b><span class="text-danger">DELETE</span> Post</b></h6>
                   <div class="my-1">
                     Ex: {{ url('api/topicality').'/' }}<span class="text-danger">{post-ID}</span>?api_token=<span class="text-danger">{user-token}</span>
                   </div>
@@ -78,8 +77,8 @@
                     <input type="text" id="delete-input" name="url" class="form-control mt-1" value="{{ url('api/topicality').'/1?api_token='.Auth::user()->api_token }}">
                     <button type="submit" class="btn btn-primary shadow mt-1">Submit</button>
                   @endauth
-                  <textarea id="delete-frame" name="frame" class="form-control mt-1 border-white bg-secondary text-warning" rows="4" cols="80" readonly>Response... @guest {{ 'Login first' }} @endguest</textarea>
-                  </fieldset>
+                  <pre><code class="json border rounded text-left frame mt-1" id="delete-frame" style="height:150px;">{"API" : "Response ..."} @guest {{ 'Login first' }} @endguest</code></pre>
+                </fieldset>
                 </form>
               </div>
 

@@ -13,7 +13,7 @@
           After registration you will get a <b class="text-danger">token</b> wish give you the necessary authorization to use the API.
         </p>
         <p>
-          You can get 1 or all the existing messages. After posting a new message you can update it or delete it as you wish.
+          You can make a call to get 1 or all the existing messages. After posting a new message you can update it or delete it as you wish.
           A <b>JSON</b> will be returned for all API's calls to further process the received informations.
           <br>
           You can see your messages updated automaticaly in the frame on the <a href="{{ route('home') }}">home page</a> which embed the <a href="{{ route('site') }}">messaging website</a>.
