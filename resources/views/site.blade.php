@@ -1,9 +1,9 @@
 @extends('layouts.site')
 
 @section('content')
-  <div class="container-md">
+  <div class="container-lg">
     <div class="row justify-content-center">
-      <div class="col-md-9">
+      <div class="col-12">
         <h2 class="text-white">Messages list</h2>
         <div class="p-4 bg-light rounded shadow">
           @foreach ($topics as $key => $topic)

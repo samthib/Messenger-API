@@ -4,12 +4,12 @@
   <div class="container-fluid">
     <div class="row text-white">
 
-      <div class="col-md-6 order-md-2">
+      <div class="col-lg-6 order-lg-2 min-vh-100">
         <h2>Messenger Website <small><a href="{{ route('site') }}" target="_blank"><i class="fa fa-external-link" aria-hidden="true"></i></a></small></h2>
         <iframe id="site-frame" src="{{ url('site') }}" class="w-100 h-75 rounded overflow-auto shadow"></iframe>
       </div>
 
-      <div class="col-md-6 order-md-1">
+      <div class="col-lg-6 order-lg-1">
         <h2>API Calls</h2>
         @guest
           <h3 class="text-danger">Register to get your token</h3>
@@ -18,6 +18,7 @@
           <h5>Your token:</h5>
           <textarea class="form-control my-2 text-danger" name="post-response" rows="2" cols="80" readonly>{{ Auth::user()->api_token }}</textarea>
         @endauth
+
 
         <form id="get-form" class="mt-3">
           <fieldset class="form-group">

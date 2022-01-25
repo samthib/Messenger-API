@@ -1,0 +1,6 @@
+{
+    "editor.fontSize": 13,
+    "workbench.preferredDarkColorTheme": "Monokai",
+    "workbench.colorTheme": "Monokai",
+    "editor.find.autoFindInSelection": "always"
+}
